@@ -8,4 +8,7 @@
   <li>Founder: <%= @winery.founder %></li>
   <li>History: <%= @winery.history %></li>
   <li>Region: <%= link_to @winery.region.name, region_path(@winery.region.id) %></li>
+  <% @winery.varieties.each do |variety| %>
+    <li>Variety: <%= link_to variety.name, variety_path(:id => variety.id) %></li>
+  <% end %>
 </ul>

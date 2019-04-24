@@ -8,4 +8,13 @@
   <li>Originated in: <%= @variety.origin %></li>
   <li>Food pairings: <%= @variety.food %></li>
   <li>History: <%= @variety.history %></li>
+
+  <% @variety.regions.each do |region| %>
+    <li>Region: <%= link_to region.name, region_path(:id => region.id) %></li>
+  <% end %>
+  <% @variety.wineries.each do |winery| %>
+    <li>Winery: <%= link_to winery.name, winery_path(:id => winery.id) %></li>
+  <% end %>
+  
+
 </ul>
