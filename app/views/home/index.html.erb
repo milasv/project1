@@ -1,0 +1,9 @@
+<h1>Australian Wines</h1>
+<h2>History</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima, culpa. Deleniti doloremque eius quo dolorum pariatur non natus totam perspiciatis officiis facilis, quas id, quia aliquid quam laboriosam, alias!</p>
+
+<% @home.each do |region| %>
+<ul>
+<li>Name: <%= link_to region.name, region_path(region.id) %></li>
+</ul>
+<% end %>

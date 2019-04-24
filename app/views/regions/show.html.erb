@@ -1,0 +1,15 @@
+<h1><%= @region.name %></h1>
+
+<%= image_tag @region.image, :class => 'feature' %>
+
+<ul>
+  <li>Name: <%= @region.name %></li>
+  <li>State: <%= @region.state %></li>
+  <li>History: <%= @region.history %></li>
+
+  <% if @region.varieties.present? %>
+    <% @region.varieties.each do |variety| %>
+      <li>Variety: <%= link_to variety.name, variety_path(:id => variety.id) %></li>
+    <% end %>
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h1><%= @winery.name %></h1>
+
+<%= image_tag @winery.image, :class => 'feature' %>
+
+<ul>
+  <li>Name: <%= @winery.name %></li>
+  <li>Year: <%= @winery.year %></li>
+  <li>Founder: <%= @winery.founder %></li>
+  <li>History: <%= @winery.history %></li>
+  <li>Region: <%= link_to @winery.region.name, region_path(@winery.region.id) %></li>
+</ul>

@@ -1,0 +1,10 @@
+<h1>Varieties</h1>
+
+<% @varieties.each do |variety| %>
+  <%= image_tag variety.image, :class => 'thumb' %>
+
+  <ul>
+    <li>Name: <%= link_to variety.name, variety_path(variety.id) %></li>
+    <li>Color: <%= variety.color %></li>
+  </ul>
+<% end %>

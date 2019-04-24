@@ -1,0 +1,10 @@
+<h1>Wineries</h1>
+
+<% @wineries.each do |winery| %>
+  <%= image_tag winery.image, :class => 'thumb' %>
+
+  <ul>
+    <li>Name: <%= link_to winery.name, winery_path(winery.id) %></li>
+    <li>Year: <%= winery.year %></li>
+  </ul>
+<% end %>

@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav>
+        <%= link_to 'Home', root_path %>
+        |
+        <%= link_to 'Regions', regions_path %>
+        |
+        <%= link_to 'Wineries', wineries_path %>
+        |
+        <%= link_to 'Varieties', varieties_path %>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>
